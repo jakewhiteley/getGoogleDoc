@@ -1,4 +1,7 @@
-// jquery plugin
+/*
+* Google Docs Interface 
+* 2014 Jake Whiteley <twentyzerotwo.co.uk>
+*/
 (function ( $ ) {
 	$.extend({
 		getGoogleDoc: function (urlKey, callback) {
