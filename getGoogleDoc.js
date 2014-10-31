@@ -31,7 +31,7 @@
 
 			// make GET request, and return promise for chaining
 			return $.getJSON(
-				"https://spreadsheets.google.com/feeds/list/"+urlKey+"/od6/public/values?alt=json", 
+				"https://spreadsheets.google.com/feeds/list/"+urlKey+"/od6/public/values?alt=json&callback=?", 
 				function (a, b, c) {
 					// if the sheet was empty 
 					if (typeof a.feed.entry === 'undefined') {
