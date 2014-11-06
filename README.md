@@ -1,7 +1,7 @@
 getGoogleDoc
 ============
 
-`$.getGoogleDoc` will fetch the data from a public spreadsheet hosted on Google Drive, and return it as an array of objects, with each object representing a row of your spreadsheet.
+`$.getGoogleDoc` will fetch the data from a public spreadsheet hosted on Google Drive, and return it as an array of objects, with each object representing a row of your spreadsheet. It comes in at 400b when gzipped and works across all major browsers - allowing anyone to easily edit data for a project.
 
 ## Using getGoogleDoc
 
