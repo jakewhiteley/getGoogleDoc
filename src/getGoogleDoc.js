@@ -15,17 +15,17 @@
 				// get keys
 				for (k in a[0]) 
 					if (k.match(/gsx/) !== null) 
-						keys.push(k.replace('gsx$', ''))
+						keys.push(k.replace('gsx$', ''));
 				// create results array
 				for (var i = 0, t = {}; i < a.length; t = {}, i++) {
 					for (k in keys) 
 						if (keys.hasOwnProperty(k)) {
 							var result = (a[i]['gsx$' + keys[k]]['$t'].length > 0 ? a[i]['gsx$' + keys[k]]['$t'] : null);
 							// push result to results holder, type cast numbers if needed
-							t[ keys[k] ] = ( !isNaN( parseInt(result) ) ? parseInt(result) : result )
+							t[ keys[k] ] = ( !isNaN( parseInt(result) ) ? parseInt(result) : result );
 						}
 					// add result to holder
-					results.push(t)
+					results.push(t);
 				}
 			};
 
@@ -35,22 +35,17 @@
 				function (a, b, c) {
 					// if the sheet was empty 
 					if (typeof a.feed.entry === 'undefined') {
-						console.error('$.getGoogleDoc: The sheet was empty')
+						return [];
 					}
 					else {
 						// parse the results
-						self.parseEntry(a.feed.entry)
+						self.parseEntry(a.feed.entry);
 						// callback
 						if (typeof callback == 'function')
-							callback(results)
-						else if (typeof callback != 'undefined')
-							console.error('$.getGoogleDoc: Please use a function as a callback. You provided a ' + typeof callback)
+							callback(results);
 					}					
 				}
-			).fail(function () {
-				console.error('$.getGoogleDoc: Invalid key provided')
-				return false;
-			});
+			);
 		}
 	});
 }( jQuery ));
