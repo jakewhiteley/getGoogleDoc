@@ -20,7 +20,7 @@
 						if (keys.hasOwnProperty(k)) {
 							var result = (ab[i]['gsx$' + keys[k]]['$t'].length > 0 ? ab[i]['gsx$' + keys[k]]['$t'] : null);
 							// push result to results holder, type cast numbers if needed
-							t[ keys[k] ] = ( !isNaN( parseFloat(result) ) ? parseFloat(result) : result );
+							t[ keys[k] ] = ( !isNaN(result) ? parseFloat(result) : result );
 						}
 					// add result to holder
 					results.push(t);
