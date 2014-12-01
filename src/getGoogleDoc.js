@@ -22,7 +22,7 @@
 						if (keys.hasOwnProperty(k)) {
 							var result = (a[i]['gsx$' + keys[k]]['$t'].length > 0 ? a[i]['gsx$' + keys[k]]['$t'] : null);
 							// push result to results holder, type cast numbers if needed
-							t[ keys[k] ] = ( !isNaN( parseInt(result) ) ? parseInt(result) : result );
+							t[ keys[k] ] = ( !isNaN( parseFloat(result) ) ? parseFloat(result) : result );
 						}
 					// add result to holder
 					results.push(t);
